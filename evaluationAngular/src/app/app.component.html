@@ -1,1 +1,4 @@
-<p *ngFor="let s of tabStatique"> {{s.titre}}</p>
+<p *ngFor="let s of tabStatique">
+  <app-statistique [statistique]="s"></app-statistique>
+
+</p>
