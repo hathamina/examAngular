@@ -5,10 +5,3 @@
   </ul>
 </nav>
 <router-outlet></router-outlet>
-<div>
-  <div>
-
-    <p *ngFor="let s of tabStatique">
-      <app-statistique [statistique]="s" (suppression)="supprimerStatistique(s)"></app-statistique>
-    </p>
-  </div>

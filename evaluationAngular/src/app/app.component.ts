@@ -15,11 +15,4 @@ export class AppComponent {
   constructor(public singletonStat: StatistiqueService) {
     this.tabStatique = this.singletonStat.tabStatique;
   }
-
-  supprimerStatistique(statistique: Statistique) {
-    let index = this.tabStatique.indexOf(statistique);
-    if (index != -1) {
-      this.tabStatique.splice(index, 1);
-    }
-  }
 }
