@@ -25,5 +25,13 @@ export class StatistiqueService {
         '60M'
       ),
     ];
+    setTimeout(() => {
+      let NewStat = new Statistique(
+        'kfsdhffdflk-dfsdf-88997',
+        'démographie en France',
+        '67M'
+      );
+      this.tabStatique.push(NewStat);
+    }, 2000);
   }
 }

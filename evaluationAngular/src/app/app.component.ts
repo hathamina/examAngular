@@ -12,8 +12,8 @@ export class AppComponent {
 
   public tabStatique: Statistique[];
 
-  constructor(public singletonFilm: StatistiqueService) {
-    this.tabStatique = this.singletonFilm.tabStatique;
+  constructor(public singletonStat: StatistiqueService) {
+    this.tabStatique = this.singletonStat.tabStatique;
   }
 
   supprimerStatistique(statistique: Statistique) {

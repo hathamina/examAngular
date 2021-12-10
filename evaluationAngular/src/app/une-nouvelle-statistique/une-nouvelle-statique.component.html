@@ -1,1 +1,7 @@
-<p>une-nouvelle-statique works!</p>
+<form (ngSubmit)="validerForm()">
+  <input required type="text" [(ngModel)]="identifiant" name="identifiant" placeholder="identifiant" /><br />
+  <input required type="text" [(ngModel)]="titre" name="titre" placeholder="titre" /><br />
+  <input required type="text" [(ngModel)]="valeur" name="valeur" placeholder="valeur" /><br />
+  <input type="button" value="Ajouter Stat">
+
+</form>

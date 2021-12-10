@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StatistiqueComponent } from './statistique/statistique.component';
@@ -14,7 +14,7 @@ import { UneNouvelleStatiqueComponent } from './une-nouvelle-statistique/une-nou
     AfficherLaListeComponent,
     UneNouvelleStatiqueComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

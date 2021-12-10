@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Statistique } from '../models/statistique';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-afficher-la-liste',
@@ -7,13 +6,7 @@ import { Statistique } from '../models/statistique';
   styleUrls: ['./afficher-la-liste.component.css'],
 })
 export class AfficherLaListeComponent implements OnInit {
-  public tabStatistique: Statistique[] = [];
-  @Input() statistique!: Statistique;
-  suppression: any;
   constructor() {}
-  reagirAuClick() {
-    this.suppression.emit();
-  }
 
   ngOnInit(): void {}
 }
