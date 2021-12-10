@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Statistique } from './models/statistique';
+import { StatistiqueService } from './services/statistique.services';
 
 @Component({
   selector: 'app-root',
@@ -9,24 +10,16 @@ import { Statistique } from './models/statistique';
 export class AppComponent {
   title = 'evaluationAngular';
 
-  public tabStatique: Statistique[] = [];
-  constructor() {
-    this.tabStatique = [
-      new Statistique(
-        'fa1f5f40-be3b-11eb-91ec-7f5875ecfb46',
-        'Démographie en France',
-        '60M'
-      ),
-      new Statistique(
-        'fa1f5f40-be3b-11eb-91ec-7f5875ecfb46',
-        'Démographie en France',
-        '60M'
-      ),
-      new Statistique(
-        'fa1f5f40-be3b-11eb-91ec-7f5875ecfb46',
-        'Démographie en France',
-        '60M'
-      ),
-    ];
+  public tabStatique: Statistique[];
+
+  constructor(public singletonFilm: StatistiqueService) {
+    this.tabStatique = this.singletonFilm.tabStatique;
+  }
+
+  supprimerStatistique(statistique: Statistique) {
+    let index = this.tabStatique.indexOf(statistique);
+    if (index != -1) {
+      this.tabStatique.splice(index, 1);
+    }
   }
 }
