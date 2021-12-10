@@ -10,9 +10,7 @@ import { Statistique } from '../models/statistique';
 export class StatistiqueComponent implements OnInit {
   @Input() statistique!: Statistique;
   @Output() suppression = new EventEmitter();
-
   constructor() {}
-
   reagirAuClick() {
     this.suppression.emit();
   }

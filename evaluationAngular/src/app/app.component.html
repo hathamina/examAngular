@@ -1,5 +1,14 @@
+<nav>
+  <ul>
+    <li><a routerLink="/AfficherLaListe" routerLinkActive="active">Afficher la liste </a></li>
+    <li><a routerLink="/UneNouvelleStatistique" routerLinkActive="active">une nouvelle statistique</a></li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
 <div>
-  <p *ngFor="let s of tabStatique">
-    <app-statistique [statistique]="s" (suppression)="supprimerStatistique(s)"></app-statistique>
-  </p>
-</div>
+  <div>
+
+    <p *ngFor="let s of tabStatique">
+      <app-statistique [statistique]="s" (suppression)="supprimerStatistique(s)"></app-statistique>
+    </p>
+  </div>
